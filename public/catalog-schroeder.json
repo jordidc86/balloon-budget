@@ -616,6 +616,53 @@
           "name": "Refuelling Kit",
           "description": "-",
           "price": 630.0
+        },
+        {
+          "id": "item_new_1",
+          "name": "Basket Antenna (Korbantenne)",
+          "description": "-Integrated basket antenna",
+          "price": 180.0
+        },
+        {
+          "id": "item_new_2",
+          "name": "Transponder",
+          "description": "-Mode S Transponder",
+          "price": 2200.0
+        },
+        {
+          "id": "item_new_3",
+          "name": "Radio (Funk)",
+          "description": "-8.33 kHz Handheld Radio",
+          "price": 450.0
+        }
+      ]
+    },
+    {
+      "name": "CUSTOM OPTION",
+      "items": [
+        {
+          "id": "item_new_4",
+          "name": "Embroidery (Bestickung)",
+          "description": "-Custom embroidery on leather covers",
+          "price": 150.0
+        },
+        {
+          "id": "item_new_5",
+          "name": "Embroidery Setup Fee (Stickkarte)",
+          "description": "-One-time setup fee for new logos",
+          "price": 75.0
+        },
+        {
+          "id": "item_new_6",
+          "name": "Extra Wall Padding (Wandpolster)",
+          "description": "-Extra side wall padding per piece",
+          "price": 120.0
+        },
+        {
+          "id": "item_new_7",
+          "name": "Paperwork Fee (Gebuhr)",
+          "description": "-Administrative fee for registration papers",
+          "price": 300.0
         }
       ]
     },

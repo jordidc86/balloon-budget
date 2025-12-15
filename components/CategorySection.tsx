@@ -150,8 +150,29 @@ export function CategorySection({ category, selectedItems, selectedEnvelope, ven
                                             <input
                                                 type="number"
                                                 min="1"
-                                                value={selection?.quantity || 1}
-                                                onChange={(e) => onSelect({ ...item, category: category.name }, parseInt(e.target.value) || 1, selection?.customPrice)}
+                                                value={selection?.quantity?.toString() || ""}
+                                                onChange={(e) => {
+                                                    // Allow empty string to let user clear the input
+                                                    const val = e.target.value;
+                                                    if (val === "") {
+                                                        // Temporarily set to 0 or handled by UI state if we could, 
+                                                        // but here we just update with 0 or 1.
+                                                        // A better UX is often to keep the number but let them type.
+                                                        // Let's try parsing.
+                                                        onSelect({ ...item, category: category.name }, 0, selection?.customPrice);
+                                                    } else {
+                                                        const parsed = parseInt(val);
+                                                        if (!isNaN(parsed)) {
+                                                            onSelect({ ...item, category: category.name }, parsed, selection?.customPrice);
+                                                        }
+                                                    }
+                                                }}
+                                                onBlur={(e) => {
+                                                    // On blur, ensure at least 1
+                                                    if (!selection?.quantity || selection.quantity < 1) {
+                                                        onSelect({ ...item, category: category.name }, 1, selection?.customPrice);
+                                                    }
+                                                }}
                                                 className="w-16 p-1 text-sm border rounded"
                                             />
                                         </div>
@@ -163,10 +184,27 @@ export function CategorySection({ category, selectedItems, selectedEnvelope, ven
                                             <label className="text-xs uppercase font-bold text-slate-500">Price (€):</label>
                                             <input
                                                 type="number"
+                                                step="0.01"
                                                 placeholder="0.00"
-                                                value={selection?.customPrice ?? item.price}
-                                                onChange={(e) => onSelect({ ...item, category: category.name }, selection?.quantity || 1, parseFloat(e.target.value) || 0)}
-                                                className="w-24 p-1 text-sm border rounded font-mono"
+                                                // If value is 0 or matches default price, maybe show empty? 
+                                                // Or just show value. The issue was leading with "0".
+                                                // We rely on standard number input behavior but value={undefined} if we want placeholder.
+                                                // Better: utilize a local state or simplified handler.
+                                                // For now, let's just pass the raw value but handle the change better.
+                                                value={selection?.customPrice !== undefined ? selection.customPrice : ""}
+                                                onChange={(e) => {
+                                                    const val = e.target.value;
+                                                    if (val === "") {
+                                                        // Allow clearing
+                                                        onSelect({ ...item, category: category.name }, selection?.quantity || 1, 0);
+                                                    } else {
+                                                        const parsed = parseFloat(val);
+                                                        if (!isNaN(parsed)) {
+                                                            onSelect({ ...item, category: category.name }, selection?.quantity || 1, parsed);
+                                                        }
+                                                    }
+                                                }}
+                                                className="w-28 p-1 text-sm border rounded font-mono"
                                             />
                                         </div>
                                     )}

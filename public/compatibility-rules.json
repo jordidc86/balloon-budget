@@ -334,425 +334,278 @@
     }
   },
   "schroeder": {
-    "12/16": {
+    "18/16 Envelope": {
       "baskets": [
-        "M/2",
-        "I/2"
+        "IV Open Basket",
+        "M2 Competition Basket",
+        "M3 Competition Basket",
+        "M5 Competition Basket",
+        "V Open Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "13/16": {
+    "20/16 Envelope": {
       "baskets": [
-        "M/2",
-        "I/2",
-        "II/3",
-        "III/4"
+        "IV Open Basket",
+        "M3 Competition Basket",
+        "M5 Competition Basket",
+        "V Open Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "14/16": {
+    "22/16 Envelope": {
       "baskets": [
-        "M/2",
-        "I/2",
-        "II/3",
-        "III/4"
+        "IV Open Basket",
+        "M3 Competition Basket",
+        "M5 Competition Basket",
+        "V Open Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "15/16": {
+    "26/16 Envelope": {
       "baskets": [
-        "M/2",
-        "I/2",
-        "II/3",
-        "III/4"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "16/16": {
+    "30/16 Envelope": {
       "baskets": [
-        "M/2",
-        "I/2",
-        "II/3",
-        "III/4"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "17/16": {
+    "34/16 Envelope": {
       "baskets": [
-        "M/2",
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "18/16": {
+    "18/24 Envelope": {
       "baskets": [
-        "M/2",
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M3 Competition Basket",
+        "M5 Competition Basket",
+        "V Open Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "19/16": {
+    "22/24 Envelope": {
       "baskets": [
-        "M/2",
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "20/16": {
+    "26/24 Envelope": {
       "baskets": [
-        "M/2",
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "21/16": {
+    "30/24 Envelope": {
       "baskets": [
-        "M/2",
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "22/24": {
+    "34/24 Envelope": {
       "baskets": [
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "23/24": {
+    "36/24 Envelope": {
       "baskets": [
-        "M/3",
-        "II/3",
-        "III/4",
-        "IV/5"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket"
       ],
       "burners": [
-        "Single burner",
-        "Double burner"
+        "FB7 Double Burner"
       ]
     },
-    "24/24": {
+    "40/24 Envelope": {
       "baskets": [
-        "M/3",
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A"
-      ],
-      "burners": [
-        "Single burner",
-        "Double burner"
-      ]
-    },
-    "25/24": {
-      "baskets": [
-        "M/3",
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A"
-      ],
-      "burners": [
-        "Single burner",
-        "Double burner"
-      ]
-    },
-    "26/24": {
-      "baskets": [
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "27/24": {
-      "baskets": [
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "28/24": {
-      "baskets": [
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "29/24": {
-      "baskets": [
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "30/24": {
-      "baskets": [
-        "III/4",
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "31/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "32/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "33/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "34/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "35/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "36/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6"
-      ],
-      "burners": [
-        "Double burner"
-      ]
-    },
-    "40/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6",
-        "VII/7",
-        "VIII/8"
-      ],
-      "burners": [
-        "Double burner",
-        "Triple burner"
-      ]
-    },
-    "42/24": {
-      "baskets": [
-        "IV/5",
-        "M/5",
-        "V/5",
-        "V-A",
-        "VI/6",
-        "VII/7",
-        "VIII/8"
-      ],
-      "burners": [
-        "Double burner",
-        "Triple burner"
-      ]
-    },
-    "45/24": {
-      "baskets": [
-        "VI/6",
-        "VII/7",
-        "VIII/8",
-        "VIII/9"
-      ],
-      "burners": [
-        "Double burner",
-        "Triple burner"
-      ]
-    },
-    "50/24": {
-      "baskets": [
-        "VII/7",
-        "VIII/8",
-        "VIII/9",
-        "IX/10"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket",
+        "VII Center Partition Basket",
+        "VIII / 8 Single T Basket"
       ],
       "burners": [
         "FB7 Double Burner",
-        "Triple burner"
+        "FB7 Triple Burner"
       ]
     },
-    "60/24": {
+    "42/24 Envelope": {
       "baskets": [
-        "VII/7",
-        "VIII/8",
-        "VIII/9",
-        "IX/10",
-        "IX/11"
+        "IV Open Basket",
+        "M5 Competition Basket",
+        "V Open Basket",
+        "VI Partition Basket",
+        "VI Single T Basket",
+        "VII Center Partition Basket",
+        "VIII / 8 Single T Basket"
       ],
       "burners": [
         "FB7 Double Burner",
-        "Triple burner",
-        "Quad burner"
+        "FB7 Triple Burner"
       ]
     },
-    "70/24": {
+    "45/24 Envelope": {
       "baskets": [
-        "VIII/9",
-        "IX/10",
-        "IX/11",
-        "X/13",
-        "X/15"
+        "VI Partition Basket",
+        "VI Single T Basket",
+        "VII Center Partition Basket",
+        "VIII / 8 Single T Basket",
+        "VIII / 9 Double T Basket"
       ],
       "burners": [
-        "Triple burner",
-        "Quad burner"
+        "FB7 Double Burner",
+        "FB7 Triple Burner"
       ]
     },
-    "85/24": {
+    "50/24 Envelope": {
       "baskets": [
-        "IX/11",
-        "IX/13",
-        "X/15"
+        "VII Center Partition Basket",
+        "VIII / 8 Single T Basket",
+        "VIII / 9 Double T Basket",
+        "IX /11 Center Partition Basket"
       ],
       "burners": [
-        "Triple burner",
-        "Quad burner"
+        "FB7 Double Burner",
+        "FB7 Triple Burner"
       ]
     },
-    "105/28": {
+    "60/24 Envelope": {
       "baskets": [
-        "XII/19",
-        "XII/23",
-        "XIII/27"
+        "VII Center Partition Basket",
+        "VIII / 8 Single T Basket",
+        "VIII / 9 Double T Basket",
+        "IX /11 Center Partition Basket"
       ],
       "burners": [
-        "Quad burner"
+        "FB7 Double Burner",
+        "FB7 Triple Burner",
+        "FB7 Quadruple Burner"
       ]
     },
-    "125/28": {
+    "70/24 Envelope": {
       "baskets": [
-        "XIII/19",
-        "XIII/23",
-        "XIII/27"
+        "VIII / 9 Double T Basket",
+        "IX /11 Center Partition Basket",
+        "X/15 Double T Basket"
       ],
       "burners": [
-        "Quad burner"
+        "FB7 Triple Burner",
+        "FB7 Quadruple Burner"
+      ]
+    },
+    "85/24 Envelope": {
+      "baskets": [
+        "IX /11 Center Partition Basket",
+        "X/15 Double T Basket"
+      ],
+      "burners": [
+        "FB7 Triple Burner",
+        "FB7 Quadruple Burner"
+      ]
+    },
+    "105/28 Envelope": {
+      "baskets": [
+        "XI/19 Double T Basket",
+        "XII/23 Double T Basket",
+        "XIII/27 Double T Basket"
+      ],
+      "burners": [
+        "FB7 Quadruple Burner"
+      ]
+    },
+    "125/28 Envelope": {
+      "baskets": [
+        "XIII/27 Double T Basket"
+      ],
+      "burners": [
+        "FB7 Quadruple Burner"
+      ]
+    },
+    "18/24 Mistral Envelope": {
+      "baskets": [
+        "IV Open Basket",
+        "M3 Competition Basket",
+        "V Open Basket"
+      ],
+      "burners": [
+        "FB7 Double Burner"
+      ]
+    },
+    "20/24 Mistral Envelope": {
+      "baskets": [
+        "IV Open Basket",
+        "M3 Competition Basket",
+        "V Open Basket"
+      ],
+      "burners": [
+        "FB7 Double Burner"
+      ]
+    },
+    "22/24 Mistral Envelope": {
+      "baskets": [
+        "IV Open Basket",
+        "M3 Competition Basket",
+        "V Open Basket"
+      ],
+      "burners": [
+        "FB7 Double Burner"
       ]
     }
   }
