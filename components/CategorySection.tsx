@@ -239,7 +239,7 @@ export function CategorySection({ category, selectedItems, selectedEnvelope, sel
                                                                     onSelect({ ...item, category: category.name }, 1, selection?.customPrice, selection?.customDescription);
                                                                 }
                                                             }}
-                                                            className="w-16 p-1 text-sm border rounded"
+                                                            className="w-16 p-1 text-sm border rounded text-slate-900 font-medium"
                                                         />
                                                     </div>
                                                 )}
@@ -264,7 +264,7 @@ export function CategorySection({ category, selectedItems, selectedEnvelope, sel
                                                                     }
                                                                 }
                                                             }}
-                                                            className="w-28 p-1 text-sm border rounded font-mono"
+                                                            className="w-28 p-1 text-sm border rounded font-mono text-slate-900 font-medium"
                                                         />
                                                     </div>
                                                 )}
@@ -276,7 +276,7 @@ export function CategorySection({ category, selectedItems, selectedEnvelope, sel
                                                     <label className="text-xs uppercase font-bold text-slate-500 block mb-1">Description / Note:</label>
                                                     <input
                                                         type="text"
-                                                        className="w-full p-1.5 text-sm border rounded"
+                                                        className="w-full p-1.5 text-sm border rounded text-slate-900"
                                                         placeholder="Enter custom description..."
                                                         value={selection?.customDescription || ""}
                                                         onChange={(e) => onSelect({ ...item, category: category.name }, selection?.quantity || 1, selection?.customPrice, e.target.value)}

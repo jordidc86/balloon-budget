@@ -19,6 +19,7 @@ export interface SavedQuotation {
         quantity: number;
         price: number;
         customPrice?: number;
+        customDescription?: string;
     }>;
     discount: number;
     total: number;

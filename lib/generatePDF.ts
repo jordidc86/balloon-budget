@@ -90,12 +90,13 @@ export async function generatePDF(
     if (client.email) doc.text(`Email: ${client.email} `, 120, startY + 20);
 
     // 4. Table with enhanced formatting
-    const tableData = items.map(({ item, quantity, customPrice }, index) => {
+    const tableData = items.map(({ item, quantity, customPrice, customDescription }, index) => {
         const price = customPrice !== undefined ? customPrice : item.price;
         const totalItem = price * quantity;
 
         // Format description with bullet points for key features
-        let description = item.description || "";
+        // Use customDescription if provided, otherwise use generic item description
+        let description = customDescription || item.description || "";
         if (description) {
             // Split by newlines and add bullet points
             const lines = description.split('\n').filter(line => line.trim());

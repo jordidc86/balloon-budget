@@ -77,7 +77,8 @@ export function BudgetBuilder({ catalog, vendorInfo, loadedQuotation, onQuotatio
                     itemsMap.set(savedItem.itemId, {
                         item: catalogItem,
                         quantity: savedItem.quantity,
-                        customPrice: savedItem.customPrice
+                        customPrice: savedItem.customPrice,
+                        customDescription: savedItem.customDescription
                     });
                 }
             });
@@ -122,13 +123,14 @@ export function BudgetBuilder({ catalog, vendorInfo, loadedQuotation, onQuotatio
                 date: new Date().toISOString(),
                 clientName: clientDetails.name,
                 clientDetails,
-                items: Array.from(selectedItems.values()).map(({ item, quantity, customPrice }) => ({
+                items: Array.from(selectedItems.values()).map(({ item, quantity, customPrice, customDescription }) => ({
                     itemId: item.id,
                     itemName: item.name,
                     category: item.category || "UNKNOWN",
                     quantity,
                     price: item.price,
-                    customPrice
+                    customPrice,
+                    customDescription
                 })),
                 discount,
                 total: totalAmount,
