@@ -163,7 +163,7 @@ export function CategorySection({ category, selectedItems, selectedEnvelope, sel
                                         <label className="text-xs uppercase font-bold text-slate-500 block mb-1">Description / Note:</label>
                                         <input
                                             type="text"
-                                            className="w-full p-2 text-sm border rounded bg-white"
+                                            className="w-full p-2 text-sm border rounded bg-white text-slate-900"
                                             placeholder="Enter custom description..."
                                             value={getSelection(currentSelectedItem.id)?.customDescription || ""}
                                             onChange={(e) => onSelect({ ...currentSelectedItem, category: category.name }, 1, undefined, e.target.value)}
