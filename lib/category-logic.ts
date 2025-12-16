@@ -26,7 +26,7 @@ export function getCategoryBehavior(categoryName?: string): CategoryBehavior {
 
     // Qty components: Allow user to set quantity
     // "ANCILLARY" contains Inflation Fan
-    if (["FUELTANK", "ANCILLARY", "ACCESSORIES"].includes(upper)) {
+    if (["FUELTANK", "FUELTANK SUPPLEMENTS", "ANCILLARY", "ACCESSORIES"].includes(upper)) {
         return "multi-qty";
     }
 
