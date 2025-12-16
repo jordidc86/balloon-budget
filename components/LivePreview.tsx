@@ -24,6 +24,8 @@ interface LivePreviewProps {
     onAddCustomItem: (name: string, description: string, price: number) => void;
     onRemoveItem: (itemId: string) => void;
     vendorInfo: VendorInfo;
+    paymentTerms: string;
+    onPaymentTermsChange: (val: string) => void;
 }
 
 export function LivePreview({
@@ -36,7 +38,9 @@ export function LivePreview({
     quotationNumber,
     onAddCustomItem,
     onRemoveItem,
-    vendorInfo
+    vendorInfo,
+    paymentTerms,
+    onPaymentTermsChange
 }: LivePreviewProps) {
 
     // Custom Item Local State
@@ -187,8 +191,20 @@ export function LivePreview({
                 </div>
             </div>
 
+            {/* Payment Terms Section */}
+            <div className="mt-6 pt-4 border-t border-slate-700">
+                <label className="text-slate-400 text-sm font-bold uppercase mb-2 block">Terms & Conditions</label>
+                <textarea
+                    rows={4}
+                    value={paymentTerms}
+                    onChange={(e) => onPaymentTermsChange(e.target.value)}
+                    className="w-full p-2 rounded bg-slate-800 border border-slate-600 text-xs text-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
+                    placeholder="Enter payment terms and conditions..."
+                />
+            </div>
+
             <button
-                onClick={() => generatePDF(selectedItems, total, discount, clientDetails, quotationNumber, vendorInfo)}
+                onClick={() => generatePDF(selectedItems, total, discount, clientDetails, quotationNumber, vendorInfo, paymentTerms)}
                 disabled={selectedItems.length === 0}
                 className="w-full mt-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-slate-700 disabled:cursor-not-allowed rounded-lg font-bold transition-all shadow-lg hover:shadow-blue-900/50"
             >

@@ -27,18 +27,17 @@ export async function generatePDF(
     discount: number,
     client: ClientDetails,
     quoteNo: string,
-    vendor: VendorInfo
+    vendor: VendorInfo,
+    paymentTerms: string // New argument
 ) {
     const doc = new jsPDF();
 
     // Settings
     const margin = 14;
-    const primaryColor = [220, 50, 50] as [number, number, number]; // Schroeder Red-ish guess? Or generic dark.
-    // Actually let's look at the "Schroeder" excel. Schroeder Fire Balloons usually uses a specific Red.
-    // Let's use a professional Dark Blue/Grey for now if unsure, or Black.
     const themeColor = [40, 40, 40] as [number, number, number];
 
-    // 1. Logo
+    // ... (rest of simple setup) ...
+    // 1. Logo (Copy of existing logic)
     try {
         // Expecting logo.jpg in public folder
         const img = await loadImage("/logo.jpg");
@@ -195,11 +194,11 @@ export async function generatePDF(
 
     finalY = boxY + 45;
 
-    // 6. Notes Section
+    // 6. Notes Section (Now Dynamic)
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(0, 0, 0);
-    doc.text("IMPORTANT NOTES", margin, finalY);
+    doc.text("TERMS & CONDITIONS", margin, finalY);
 
     doc.setDrawColor(30, 58, 138);
     doc.setLineWidth(0.5);
@@ -209,18 +208,20 @@ export async function generatePDF(
     doc.setFont("helvetica", "normal");
     doc.setTextColor(60, 60, 60);
 
-    const notes = [
-        "• All prices are in EUR, VAT not included",
-        "• Delivery time: 10-12 weeks from order confirmation",
-        "• Prices are Ex Works (customer arranges shipping)",
-        "• Custom artwork and colors available upon request",
-        "• Quotation valid for 30 days from issue date"
-    ];
-
     let noteY = finalY + 8;
+    // Split user input by lines
+    const notes = paymentTerms.split('\n');
+
     notes.forEach(note => {
-        doc.text(note, margin, noteY);
-        noteY += 5;
+        // Simple bullet point logic if not already present
+        const text = note.trim().startsWith("•") || note.trim().startsWith("-")
+            ? note.trim()
+            : `• ${note.trim()}`;
+
+        // Handle long lines
+        const splitText = doc.splitTextToSize(text, 180);
+        doc.text(splitText, margin, noteY);
+        noteY += (splitText.length * 4) + 2;
     });
 
     // 7. Footer with legal information
@@ -237,9 +238,9 @@ export async function generatePDF(
     doc.setTextColor(100, 100, 100);
     doc.setFont("helvetica", "normal");
 
-    // Left side - Payment terms
-    doc.text("Payment Terms: 50% deposit, 50% before delivery", margin, footerY);
-    doc.text(`Bank Details: Contact ${vendor.email} for payment information`, margin, footerY + 4);
+    // Left side - Payment terms (Simplified as detailed terms are above)
+    // doc.text("Payment Terms: See details above", margin, footerY);
+    doc.text(`Bank Details: Contact ${vendor.email} for payment information`, margin, footerY); // Adjusted Y
 
     // Right side - Quote reference
     doc.text(`Quotation #${quoteNo}`, 200, footerY, { align: "right" });

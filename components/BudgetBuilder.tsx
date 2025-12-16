@@ -43,6 +43,11 @@ export function BudgetBuilder({ catalog, vendorInfo, loadedQuotation, onQuotatio
     // Quotation Number Logic (Year + Correlative)
     const [quotationNumber, setQuotationNumber] = useState("");
 
+    // Payment Terms State with default value
+    const [paymentTerms, setPaymentTerms] = useState<string>(
+        `• All prices are in EUR, VAT not included\n• Payment conditions: 50% deposit and 50% down payment\n• Delivery time: 12 weeks from order confirmation\n• Shipping: Ex-Works (customer arranges shipping)\n• Taxes not included`
+    );
+
     // Load saved quotation if provided
     useEffect(() => {
         if (loadedQuotation && onQuotationLoaded) {
@@ -54,6 +59,11 @@ export function BudgetBuilder({ catalog, vendorInfo, loadedQuotation, onQuotatio
 
             // Restore quotation number
             setQuotationNumber(loadedQuotation.quotationNumber);
+
+            // Restore payment terms if available (fallback to default if new field missing in old saves)
+            if (loadedQuotation.paymentTerms) {
+                setPaymentTerms(loadedQuotation.paymentTerms);
+            }
 
             // Restore selected items
             const itemsMap = new Map<string, SelectedItem>();
@@ -122,11 +132,12 @@ export function BudgetBuilder({ catalog, vendorInfo, loadedQuotation, onQuotatio
                 })),
                 discount,
                 total: totalAmount,
-                quotationNumber
+                quotationNumber,
+                paymentTerms // Save the current terms
             };
             saveQuotation(quotation);
         }
-    }, [selectedItems, clientDetails, discount, quotationNumber, totalAmount, vendorInfo]);
+    }, [selectedItems, clientDetails, discount, quotationNumber, totalAmount, vendorInfo, paymentTerms]);
 
 
     // Derive selected Envelope and Burner for compatibility
@@ -297,6 +308,8 @@ export function BudgetBuilder({ catalog, vendorInfo, loadedQuotation, onQuotatio
                             onAddCustomItem={handleAddCustomItem}
                             onRemoveItem={handleRemove}
                             vendorInfo={vendorInfo}
+                            paymentTerms={paymentTerms}
+                            onPaymentTermsChange={setPaymentTerms}
                         />
                     </div>
                 </div>

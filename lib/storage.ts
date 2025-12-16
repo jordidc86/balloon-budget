@@ -23,6 +23,7 @@ export interface SavedQuotation {
     discount: number;
     total: number;
     quotationNumber: string;
+    paymentTerms?: string;
 }
 
 const STORAGE_KEY = "balloon_quotations";
